@@ -1,4 +1,5 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, File, UploadFile, Form
+from image_analysis import analyze_room
 from fastapi.middleware.cors import CORSMiddleware
 import json
 from pathlib import Path
@@ -33,3 +34,55 @@ def health():
 @app.get("/api/products")
 def get_products():
     return load_products()
+    
+
+@app.post("/api/visualize")
+async def visualize(
+    room_image: UploadFile = File(...),
+    product_id: str = Form(...),
+):
+    # Validate image type
+    if not room_image.content_type or not room_image.content_type.startswith("image/"):
+        return {
+            "success": False,
+            "message": "Please upload a valid image."
+        }
+
+    # Find selected product
+    products = load_products()
+
+    product = next(
+        (item for item in products if item["id"] == product_id),
+        None
+    )
+
+    if product is None:
+        return {
+            "success": False,
+            "message": "Product not found."
+        }
+
+    # Read uploaded image
+    image_bytes = await room_image.read()
+
+    # Basic validation
+    if len(image_bytes) == 0:
+        return {
+            "success": False,
+            "message": "Uploaded image is empty."
+        }
+        
+    analysis = analyze_room(image_bytes, product)
+
+    if analysis is None:
+        return {
+            "success": False,
+            "message": "Unable to process image."
+        }
+
+    return {
+        "success": True,
+        "message": "Room analyzed successfully.",
+        "product": product,
+        "analysis": analysis
+    }
