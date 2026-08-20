@@ -155,9 +155,12 @@ export default function Home() {
                     </p>
                   </div>
 
-                  <button className="mt-5 w-full rounded-xl bg-slate-900 px-4 py-3 text-sm font-semibold text-white transition hover:bg-slate-700">
+                  <a
+                    href={`/studio?product=${product.id}`}
+                    className="mt-5 block w-full rounded-xl bg-slate-900 px-4 py-3 text-center text-sm font-semibold text-white transition hover:bg-slate-700"
+                  >
                     Visualize in my space
-                  </button>
+                  </a>
                 </div>
               </article>
             ))}
