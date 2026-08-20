@@ -19,6 +19,13 @@ def analyze_room(image_bytes, product):
     edges = cv2.Canny(gray, 100, 200)
     edge_density = float(np.mean(edges > 0))
 
+    # Lower-region edge density
+    height = gray.shape[0]
+    lower_region = gray[int(height * 0.4):, :]
+
+    lower_edges = cv2.Canny(lower_region, 100, 200)
+    lower_edge_density = float(np.mean(lower_edges > 0))
+
     # 3. Room tone
     avg_color = np.mean(image.reshape(-1, 3), axis=0)
 
