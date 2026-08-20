@@ -15,18 +15,19 @@
     "image": "/products/modern-grey-sofa.png"
   },
   {
-    "id": "sofa-002",
-    "name": "Beige Comfort Sofa",
-    "category": "Sofa",
-    "price": 28999,
+    "id": "wardrobe-001",
+    "name": "Modern Glass Wardrobe",
+    "category": "Wardrobe",
+    "price": 32999,
     "dimensions": {
-      "width": 220,
-      "depth": 92,
-      "height": 86
+      "width": 180,
+      "depth": 60,
+      "height": 210
     },
-    "material": "Linen Fabric",
-    "color": "Beige",
-    "style": "Minimal"
+    "material": "Smoked Glass & Wood",
+    "color": "Walnut",
+    "style": "Contemporary",
+    "image": "/products/modern-glass-wardrobe.png"
   },
   {
     "id": "chair-001",
@@ -40,20 +41,22 @@
     },
     "material": "Fabric",
     "color": "Olive",
-    "style": "Contemporary"
+    "style": "Contemporary",
+    "image": "/products/modern-accent-chair.png"
   },
   {
     "id": "table-001",
-    "name": "Minimal Coffee Table",
+    "name": "Designer Modern Coffee Table",
     "category": "Table",
-    "price": 8999,
+    "price": 14999,
     "dimensions": {
-      "width": 110,
-      "depth": 60,
+      "width": 120,
+      "depth": 65,
       "height": 42
     },
-    "material": "Engineered Wood",
+    "material": "Smoked Glass & Walnut",
     "color": "Walnut",
-    "style": "Minimal"
+    "style": "Luxury Modern",
+    "image": "/products/designer-modern-coffee-table.png"
   }
 ]
