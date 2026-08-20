@@ -1,0 +1,59 @@
+[
+  {
+    "id": "sofa-001",
+    "name": "Modern Grey Sofa",
+    "category": "Sofa",
+    "price": 24999,
+    "dimensions": {
+      "width": 210,
+      "depth": 90,
+      "height": 85
+    },
+    "material": "Premium Fabric",
+    "color": "Grey",
+    "style": "Modern",
+    "image": "/products/modern-grey-sofa.jpg"
+  },
+  {
+    "id": "sofa-002",
+    "name": "Beige Comfort Sofa",
+    "category": "Sofa",
+    "price": 28999,
+    "dimensions": {
+      "width": 220,
+      "depth": 92,
+      "height": 86
+    },
+    "material": "Linen Fabric",
+    "color": "Beige",
+    "style": "Minimal"
+  },
+  {
+    "id": "chair-001",
+    "name": "Modern Accent Chair",
+    "category": "Chair",
+    "price": 12999,
+    "dimensions": {
+      "width": 78,
+      "depth": 82,
+      "height": 88
+    },
+    "material": "Fabric",
+    "color": "Olive",
+    "style": "Contemporary"
+  },
+  {
+    "id": "table-001",
+    "name": "Minimal Coffee Table",
+    "category": "Table",
+    "price": 8999,
+    "dimensions": {
+      "width": 110,
+      "depth": 60,
+      "height": 42
+    },
+    "material": "Engineered Wood",
+    "color": "Walnut",
+    "style": "Minimal"
+  }
+]
